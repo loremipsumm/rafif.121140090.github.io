@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rekap Client</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <div class="logo-and-title">
+        <img src="img/Logo.png" alt="logo">
+        <h1>JASA DESAIN RAFIF</h1>
+    </div>
+</head>
+<body>
+    <hr style="width: 100%;">
+    <form>
+        <table>
+            <tr>
+                <td><button class="tombol" type="button" onclick="window.location.href='index.html'">Beranda</button></a></td>
+                <td><button class="tombol" type="button" onclick="window.location.href='formulir.html'">Order Desain</button></a></td>
+                <td><button class="tombol-active" type="button" onclick="window.location.href='table.html'">Rekap Client</button></a></td>
+            </tr>
+        </table>
+    </form>
+    <hr style="width: 100%;">
+
+    <div id="table-data">
+        <h1>Rekap Client Jasa Desain Rafif</h1>
+
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>No. Telp</th>
+                <th>Instagram</th>
+                <th>Email</th>
+                <th>Estimasi Dana</th>
+                <th>Jenis Desain</th>
+                <th>Deadline</th>
+                <th>Brief Desain</th>
+            </tr>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const nama = urlParams.get('nama');
+                const telp = urlParams.get('telp');
+                const ig = urlParams.get('ig');
+                const email = urlParams.get('email');
+                const dana = urlParams.get('dana');
+                const jenisDesain = urlParams.get('jenis-desain');
+                const deadline = urlParams.get('deadline');
+                const brief = urlParams.get('brief');
+        
+                if (nama) {
+                    const table = document.querySelector('div table');
+                    const newRow = table.insertRow(-1);
+        
+                    const cell1 = newRow.insertCell(0);
+                    cell1.textContent = nama;
+        
+                    const cell2 = newRow.insertCell(1);
+                    cell2.textContent = telp;
+        
+                    const cell3 = newRow.insertCell(2);
+                    cell3.textContent = ig;
+        
+                    const cell4 = newRow.insertCell(3);
+                    cell4.textContent = email;
+        
+                    const cell5 = newRow.insertCell(4);
+                    cell5.textContent = dana;
+        
+                    const cell6 = newRow.insertCell(5);
+                    cell6.textContent = jenisDesain;
+        
+                    const cell7 = newRow.insertCell(6);
+                    cell7.textContent = deadline;
+        
+                    const cell8 = newRow.insertCell(7);
+                    cell8.textContent = "**************";
+                }
+            </script>
+            <tr>
+                <td>Miftah Hasan</td>
+                <td>085612754098</td>
+                <td>@miftah.hasan</td>
+                <td>miftah.hasan@gmail.com</td>
+                <td>500000</td>
+                <td>Poster</td>
+                <td>2023-10-30</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Idza Ramaulkim</td>
+                <td>083758419274</td>
+                <td>@idza_r</td>
+                <td>idzz.rn@gmail.com</td>
+                <td>950000</td>
+                <td>Poster</td>
+                <td>2023-10-29</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Rama Aldiaksa</td>
+                <td>085628721673</td>
+                <td>@rama_aldi</td>
+                <td>rama_aldi@gmail.com</td>
+                <td>1150000</td>
+                <td>Ilustrasi</td>
+                <td>2023-10-29</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Rendy Apriansyah</td>
+                <td>089756284627</td>
+                <td>@rendy.ap2</td>
+                <td>rendy.ap2@gmail.com</td>
+                <td>650000</td>
+                <td>Ilustrasi</td>
+                <td>2023-10-30</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Abdi Maskur</td>
+                <td>085617265827</td>
+                <td>@abditek</td>
+                <td>abditek@gmail.com</td>
+                <td>1400000</td>
+                <td>Ilustrasi</td>
+                <td>2023-10-26</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Silvester</td>
+                <td>0886265836281</td>
+                <td>@silvester</td>
+                <td>silvester@gmail.com</td>
+                <td>750000</td>
+                <td>Poster</td>
+                <td>2023-10-27</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Galin Nichola</td>
+                <td>0856719275829</td>
+                <td>@galinnn</td>
+                <td>galinnnn@gmail.com</td>
+                <td>950000</td>
+                <td>Ilustrasi</td>
+                <td>2023-10-28</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Rafli Hafidz</td>
+                <td>086574620856</td>
+                <td>@rafli_hfz</td>
+                <td>rafli_hfz@gmail.com</td>
+                <td>850000</td>
+                <td>Poster</td>
+                <td>2023-10-27</td>
+                <td>**************</td>
+            </tr>
+            <tr>
+                <td>Yusuf Pandu</td>
+                <td>089124085615</td>
+                <td>@yusup.panduu</td>
+                <td>yusup.panduu@gmail.com</td>
+                <td>900000</td>
+                <td>Poster</td>
+                <td>2023-10-28</td>
+                <td>**************</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<footer>
+    <p>&copy; Hak Cipta 2023 - Jasa Desain Rafif</p>
+</footer>
+</html>
